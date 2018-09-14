@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "pretty": "prettier --write --tab-width 4 \"src/**/*.js\""
-    
+  
   },
   "lint-staged": {
     "*.js": [
