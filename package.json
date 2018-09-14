@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\"",
-    "precommit": "lint-staged && npm test"
+    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\""
+    
   },
   "lint-staged": {
     "*.js": [
