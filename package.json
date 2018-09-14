@@ -1,0 +1,29 @@
+{
+  "name": "react-bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyrese1/React-bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tyrese1/React-bootcamp/issues"
+  },
+  "homepage": "https://github.com/Tyrese1/React-bootcamp#readme",
+  "dependencies": {
+    "parcel": "^1.9.7",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  }
+}
