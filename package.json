@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\""
+    "test": "jest",
+    "pretty": "prettier --write --tab-width 4 \"src/**/*.js\"",
+    "precommit": "lint-staged && npm test"
   },
+  "lint-staged": {
+    "*.js": [
+        "npm run pretty",
+        "git add"
+    ]
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tyrese1/React-bootcamp.git"
