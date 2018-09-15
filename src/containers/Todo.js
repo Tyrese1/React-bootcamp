@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import TodoList from '../components/TodoList'
 import TodoForm from '../components/TodoForm'
+import TodoList from '../components/TodoList'
+import Portal from './portals/Portal'
 import './todo.scss'
 
 class Todo extends Component {
@@ -70,6 +71,9 @@ class Todo extends Component {
         {this.state.todos.length > 0 && (
           <TodoList todos={this.state.todos} removeItem={this.removeItem} />
         )}
+         {/* <Portal>
+          <h1 id="footer">THIS FOOTER IS CREATED USING A PORTAL</h1>
+        </Portal> */}
       </div>
     )
   }

@@ -21143,7 +21143,47 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules\\react-dom\\cjs\\react-dom.development.js"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules\\react-dom\\cjs\\react-dom.development.js"}],"src\\components\\TodoForm.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TodoForm = function TodoForm(props) {
+  return _react2.default.createElement(
+    "form",
+    { onSubmit: props.handleSubmit, id: "todo-form" },
+    _react2.default.createElement("label", { htmlFor: "todo" }),
+    _react2.default.createElement("input", {
+      id: "todo",
+      name: "title",
+      value: props.text,
+      onChange: props.handleChange
+    }),
+    _react2.default.createElement("label", { htmlFor: "description" }),
+    _react2.default.createElement("input", {
+      id: "descriotion",
+      name: "description",
+      value: props.description,
+      onChange: props.handleChange
+    }),
+    _react2.default.createElement(
+      "button",
+      null,
+      "Add Todo"
+    )
+  );
+};
+
+exports.default = TodoForm;
+},{"react":"node_modules\\react\\index.js"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -21250,47 +21290,71 @@ var TodoList = function TodoList(props) {
 };
 
 exports.default = TodoList;
-},{"react":"node_modules\\react\\index.js","./todolist.scss":"src\\components\\todolist.scss"}],"src\\components\\TodoForm.js":[function(require,module,exports) {
-"use strict";
+},{"react":"node_modules\\react\\index.js","./todolist.scss":"src\\components\\todolist.scss"}],"src\\containers\\portals\\Portal.js":[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require("react");
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TodoForm = function TodoForm(props) {
-  return _react2.default.createElement(
-    "form",
-    { onSubmit: props.handleSubmit, id: "todo-form" },
-    _react2.default.createElement("label", { htmlFor: "todo" }),
-    _react2.default.createElement("input", {
-      id: "todo",
-      name: "title",
-      value: props.text,
-      onChange: props.handleChange
-    }),
-    _react2.default.createElement("label", { htmlFor: "description" }),
-    _react2.default.createElement("input", {
-      id: "descriotion",
-      name: "description",
-      value: props.description,
-      onChange: props.handleChange
-    }),
-    _react2.default.createElement(
-      "button",
-      null,
-      "Add Todo"
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-exports.default = TodoForm;
-},{"react":"node_modules\\react\\index.js"}],"src\\containers\\todo.scss":[function(require,module,exports) {
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Theme file
+
+var portalRoot = document.getElementById('portal');
+
+var Portal = function (_Component) {
+  _inherits(Portal, _Component);
+
+  function Portal() {
+    _classCallCheck(this, Portal);
+
+    var _this = _possibleConstructorReturn(this, (Portal.__proto__ || Object.getPrototypeOf(Portal)).call(this));
+
+    _this.el = document.createElement('div');
+    return _this;
+  }
+
+  _createClass(Portal, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      portalRoot.appendChild(this.el);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      portalRoot.removeChild(this.el);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var children = this.props.children;
+
+      return _reactDom2.default.createPortal(children, this.el);
+    }
+  }]);
+
+  return Portal;
+}(_react.Component);
+
+exports.default = Portal;
+},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js"}],"src\\containers\\todo.scss":[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
@@ -21308,13 +21372,17 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _TodoForm = require('../components/TodoForm');
+
+var _TodoForm2 = _interopRequireDefault(_TodoForm);
+
 var _TodoList = require('../components/TodoList');
 
 var _TodoList2 = _interopRequireDefault(_TodoList);
 
-var _TodoForm = require('../components/TodoForm');
+var _Portal = require('./portals/Portal');
 
-var _TodoForm2 = _interopRequireDefault(_TodoForm);
+var _Portal2 = _interopRequireDefault(_Portal);
 
 require('./todo.scss');
 
@@ -21421,7 +21489,7 @@ var Todo = function (_Component) {
 }(_react.Component);
 
 exports.default = Todo;
-},{"react":"node_modules\\react\\index.js","../components/TodoList":"src\\components\\TodoList.js","../components/TodoForm":"src\\components\\TodoForm.js","./todo.scss":"src\\containers\\todo.scss"}],"src\\App.js":[function(require,module,exports) {
+},{"react":"node_modules\\react\\index.js","../components/TodoForm":"src\\components\\TodoForm.js","../components/TodoList":"src\\components\\TodoList.js","./portals/Portal":"src\\containers\\portals\\Portal.js","./todo.scss":"src\\containers\\todo.scss"}],"src\\App.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
