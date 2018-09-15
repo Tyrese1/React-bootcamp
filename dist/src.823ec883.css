@@ -1,3 +1,42 @@
+/** colors **/
+#todo-list-wrapper {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0; }
+  #todo-list-wrapper li {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    background: orange;
+    padding: 5px;
+    margin: 0 0 5px 0; }
+/** colors **/
+#todo-container-wrappper {
+  background: #f5f5f5;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #todo-container-wrappper #todo-form {
+    display: flex;
+    width: 100%; }
+    #todo-container-wrappper #todo-form input,
+    #todo-container-wrappper #todo-form button {
+      height: 30px;
+      outline: none;
+      padding: 5px; }
+    #todo-container-wrappper #todo-form input {
+      display: flex;
+      flex-grow: 2; }
+    #todo-container-wrappper #todo-form button {
+      width: 150px; }
+  #todo-container-wrappper .error {
+    color: red; }
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900");
 /** colors **/
 * {
