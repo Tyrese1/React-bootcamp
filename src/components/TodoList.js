@@ -6,7 +6,7 @@ const TodoList = props => (
     {props.todos.map(todo => (
       <li key={todo.id}>
         <span>{todo.title}</span>
-        <button onClick={() => props.removeItem(todo)}>Remove</button>
+        <button onClick={() => props.removeItem(todo)}>Remove todo</button>
       </li>
     ))}
   </ul>

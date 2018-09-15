@@ -21242,7 +21242,7 @@ var TodoList = function TodoList(props) {
           { onClick: function onClick() {
               return props.removeItem(todo);
             } },
-          'Remove'
+          'Remove todo'
         )
       );
     })
@@ -21284,7 +21284,7 @@ var TodoForm = function TodoForm(props) {
     _react2.default.createElement(
       "button",
       null,
-      "Add Item"
+      "Add Todo"
     )
   );
 };
