@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-// Theme file
+
 
 const portalRoot = document.getElementById('portal')
 
