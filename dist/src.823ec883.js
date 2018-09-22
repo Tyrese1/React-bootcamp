@@ -21487,71 +21487,7 @@ var Todo = function (_Component) {
 }(_react.Component);
 
 exports.default = Todo;
-},{"react":"node_modules\\react\\index.js","../components/TodoForm":"src\\components\\TodoForm.js","../components/TodoList":"src\\components\\TodoList.js","./portals/Portal":"src\\containers\\portals\\Portal.js","./todo.scss":"src\\containers\\todo.scss"}],"src\\App.js":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Todo = require('./containers/Todo');
-
-var _Todo2 = _interopRequireDefault(_Todo);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// import Routes from './routes'
-
-// export default () => <Routes />
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { id: 'root-container' },
-        _react2.default.createElement(
-          'h1',
-          { id: '__welcome-header' },
-          'Welcome!'
-        ),
-        _react2.default.createElement('hr', null),
-        _react2.default.createElement(_Todo2.default, null)
-      );
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-exports.default = App;
-},{"react":"node_modules\\react\\index.js","./containers/Todo":"src\\containers\\Todo.js"}],"src\\style\\global.scss":[function(require,module,exports) {
-
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"node_modules\\warning\\warning.js":[function(require,module,exports) {
+},{"react":"node_modules\\react\\index.js","../components/TodoForm":"src\\components\\TodoForm.js","../components/TodoList":"src\\components\\TodoList.js","./portals/Portal":"src\\containers\\portals\\Portal.js","./todo.scss":"src\\containers\\todo.scss"}],"node_modules\\warning\\warning.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -25907,15 +25843,107 @@ exports.Switch = _Switch3.default;
 exports.generatePath = _generatePath3.default;
 exports.matchPath = _matchPath3.default;
 exports.withRouter = _withRouter3.default;
-},{"./BrowserRouter":"node_modules\\react-router-dom\\es\\BrowserRouter.js","./HashRouter":"node_modules\\react-router-dom\\es\\HashRouter.js","./Link":"node_modules\\react-router-dom\\es\\Link.js","./MemoryRouter":"node_modules\\react-router-dom\\es\\MemoryRouter.js","./NavLink":"node_modules\\react-router-dom\\es\\NavLink.js","./Prompt":"node_modules\\react-router-dom\\es\\Prompt.js","./Redirect":"node_modules\\react-router-dom\\es\\Redirect.js","./Route":"node_modules\\react-router-dom\\es\\Route.js","./Router":"node_modules\\react-router-dom\\es\\Router.js","./StaticRouter":"node_modules\\react-router-dom\\es\\StaticRouter.js","./Switch":"node_modules\\react-router-dom\\es\\Switch.js","./generatePath":"node_modules\\react-router-dom\\es\\generatePath.js","./matchPath":"node_modules\\react-router-dom\\es\\matchPath.js","./withRouter":"node_modules\\react-router-dom\\es\\withRouter.js"}],"src\\route\\Home.js":[function(require,module,exports) {
+},{"./BrowserRouter":"node_modules\\react-router-dom\\es\\BrowserRouter.js","./HashRouter":"node_modules\\react-router-dom\\es\\HashRouter.js","./Link":"node_modules\\react-router-dom\\es\\Link.js","./MemoryRouter":"node_modules\\react-router-dom\\es\\MemoryRouter.js","./NavLink":"node_modules\\react-router-dom\\es\\NavLink.js","./Prompt":"node_modules\\react-router-dom\\es\\Prompt.js","./Redirect":"node_modules\\react-router-dom\\es\\Redirect.js","./Route":"node_modules\\react-router-dom\\es\\Route.js","./Router":"node_modules\\react-router-dom\\es\\Router.js","./StaticRouter":"node_modules\\react-router-dom\\es\\StaticRouter.js","./Switch":"node_modules\\react-router-dom\\es\\Switch.js","./generatePath":"node_modules\\react-router-dom\\es\\generatePath.js","./matchPath":"node_modules\\react-router-dom\\es\\matchPath.js","./withRouter":"node_modules\\react-router-dom\\es\\withRouter.js"}],"src\\components\\newRoute.js":[function(require,module,exports) {
 'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"react":"node_modules\\react\\index.js"}],"src\\index.js":[function(require,module,exports) {
+
+var newRoute = function newRoute() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h1',
+      null,
+      'This is a new Route'
+    )
+  );
+};
+
+exports.default = newRoute;
+},{"react":"node_modules\\react\\index.js"}],"src\\App.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Todo = require('./containers/Todo');
+
+var _Todo2 = _interopRequireDefault(_Todo);
+
+var _reactRouterDom = require('react-router-dom');
+
+var _newRoute = require('./components/newRoute');
+
+var _newRoute2 = _interopRequireDefault(_newRoute);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_Component) {
+  _inherits(App, _Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactRouterDom.BrowserRouter,
+        null,
+        _react2.default.createElement(
+          'div',
+          { id: 'root-container' },
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/new', component: _newRoute2.default, exact: true }),
+          _react2.default.createElement(
+            'h1',
+            { id: '__welcome-header' },
+            'Welcome!'
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(_Todo2.default, null)
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+exports.default = App;
+},{"react":"node_modules\\react\\index.js","./containers/Todo":"src\\containers\\Todo.js","react-router-dom":"node_modules\\react-router-dom\\es\\index.js","./components/newRoute":"src\\components\\newRoute.js"}],"src\\style\\global.scss":[function(require,module,exports) {
+
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"src\\route\\Home.js":[function(require,module,exports) {
+// import React from 'react'
+// // export default {} => <div>Home</div>;
+},{}],"src\\index.js":[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -25968,7 +25996,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56091' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63453' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
