@@ -21512,6 +21512,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// import Routes from './routes'
+
+// export default () => <Routes />
+
 var App = function (_Component) {
   _inherits(App, _Component);
 
@@ -25903,7 +25907,15 @@ exports.Switch = _Switch3.default;
 exports.generatePath = _generatePath3.default;
 exports.matchPath = _matchPath3.default;
 exports.withRouter = _withRouter3.default;
-},{"./BrowserRouter":"node_modules\\react-router-dom\\es\\BrowserRouter.js","./HashRouter":"node_modules\\react-router-dom\\es\\HashRouter.js","./Link":"node_modules\\react-router-dom\\es\\Link.js","./MemoryRouter":"node_modules\\react-router-dom\\es\\MemoryRouter.js","./NavLink":"node_modules\\react-router-dom\\es\\NavLink.js","./Prompt":"node_modules\\react-router-dom\\es\\Prompt.js","./Redirect":"node_modules\\react-router-dom\\es\\Redirect.js","./Route":"node_modules\\react-router-dom\\es\\Route.js","./Router":"node_modules\\react-router-dom\\es\\Router.js","./StaticRouter":"node_modules\\react-router-dom\\es\\StaticRouter.js","./Switch":"node_modules\\react-router-dom\\es\\Switch.js","./generatePath":"node_modules\\react-router-dom\\es\\generatePath.js","./matchPath":"node_modules\\react-router-dom\\es\\matchPath.js","./withRouter":"node_modules\\react-router-dom\\es\\withRouter.js"}],"src\\index.js":[function(require,module,exports) {
+},{"./BrowserRouter":"node_modules\\react-router-dom\\es\\BrowserRouter.js","./HashRouter":"node_modules\\react-router-dom\\es\\HashRouter.js","./Link":"node_modules\\react-router-dom\\es\\Link.js","./MemoryRouter":"node_modules\\react-router-dom\\es\\MemoryRouter.js","./NavLink":"node_modules\\react-router-dom\\es\\NavLink.js","./Prompt":"node_modules\\react-router-dom\\es\\Prompt.js","./Redirect":"node_modules\\react-router-dom\\es\\Redirect.js","./Route":"node_modules\\react-router-dom\\es\\Route.js","./Router":"node_modules\\react-router-dom\\es\\Router.js","./StaticRouter":"node_modules\\react-router-dom\\es\\StaticRouter.js","./Switch":"node_modules\\react-router-dom\\es\\Switch.js","./generatePath":"node_modules\\react-router-dom\\es\\generatePath.js","./matchPath":"node_modules\\react-router-dom\\es\\matchPath.js","./withRouter":"node_modules\\react-router-dom\\es\\withRouter.js"}],"src\\route\\Home.js":[function(require,module,exports) {
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"react":"node_modules\\react\\index.js"}],"src\\index.js":[function(require,module,exports) {
 'use strict';
 
 var _react = require('react');
@@ -25920,14 +25932,14 @@ require('./style/global.scss');
 
 var _reactRouterDom = require('react-router-dom');
 
+var _Home = require('./route/Home');
+
+var _Home2 = _interopRequireDefault(_Home);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-ReactDom.render(_react2.default.createElement(
-  BrowserRouter,
-  null,
-  _react2.default.createElement(_App2.default, null)
-), document.getElementById('root'));
-},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js","./App":"src\\App.js","./style/global.scss":"src\\style\\global.scss","react-router-dom":"node_modules\\react-router-dom\\es\\index.js"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
+},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js","./App":"src\\App.js","./style/global.scss":"src\\style\\global.scss","react-router-dom":"node_modules\\react-router-dom\\es\\index.js","./route/Home":"src\\route\\Home.js"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -25956,7 +25968,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '59202' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56091' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
