@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import Todo from './containers/Todo'
-import { BrowserRouter, Route } from 'react-router-dom' 
-import newRoute from './components/newRoute' 
+import React, { Component } from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import home from "./components/home"
+import todo from "./components/todo"
+import error from "./components/error"
+import navigation from "./components/navigation"
 
 class App extends Component {
-  render () {
+  render() {
     return (
-     
       <BrowserRouter>
-      
-      <div id="root-container">
-      <Route path="/new" component ={newRoute} exact />
-        <h1 id="__welcome-header">Welcome!</h1>
-        <hr />
-        <Todo />
-      </div>
+        <div>
+          <navigation />
+          <Switch>
+            <Route path="/" component={home} exact />
+            <Route path="/todo" component={todo} />
+            <Route path="/nav" component={navigation} />
+            <Route component={error} />
+          </Switch>
+        </div>
       </BrowserRouter>
-      
-     
-    )
+    );
   }
 }
 
-export default App
+export default App;
