@@ -25500,32 +25500,34 @@ exports.generatePath = _generatePath3.default;
 exports.matchPath = _matchPath3.default;
 exports.withRouter = _withRouter3.default;
 },{"./BrowserRouter":"node_modules\\react-router-dom\\es\\BrowserRouter.js","./HashRouter":"node_modules\\react-router-dom\\es\\HashRouter.js","./Link":"node_modules\\react-router-dom\\es\\Link.js","./MemoryRouter":"node_modules\\react-router-dom\\es\\MemoryRouter.js","./NavLink":"node_modules\\react-router-dom\\es\\NavLink.js","./Prompt":"node_modules\\react-router-dom\\es\\Prompt.js","./Redirect":"node_modules\\react-router-dom\\es\\Redirect.js","./Route":"node_modules\\react-router-dom\\es\\Route.js","./Router":"node_modules\\react-router-dom\\es\\Router.js","./StaticRouter":"node_modules\\react-router-dom\\es\\StaticRouter.js","./Switch":"node_modules\\react-router-dom\\es\\Switch.js","./generatePath":"node_modules\\react-router-dom\\es\\generatePath.js","./matchPath":"node_modules\\react-router-dom\\es\\matchPath.js","./withRouter":"node_modules\\react-router-dom\\es\\withRouter.js"}],"src\\components\\home.js":[function(require,module,exports) {
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var home = function home() {
   return _react2.default.createElement(
-    'div',
-    null,
+    "div",
+    { id: "root-container" },
     _react2.default.createElement(
-      'h1',
-      null,
-      'Notes Home'
+      _reactRouterDom.Link,
+      { to: "/todo" },
+      "Add a note"
     )
   );
 };
 
 exports.default = home;
-},{"react":"node_modules\\react\\index.js"}],"src\\components\\TodoForm.js":[function(require,module,exports) {
+},{"react":"node_modules\\react\\index.js","react-router-dom":"node_modules\\react-router-dom\\es\\index.js"}],"src\\components\\TodoForm.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26029,17 +26031,12 @@ var App = function (_Component) {
         _reactRouterDom.BrowserRouter,
         null,
         _react2.default.createElement(
-          "div",
+          _reactRouterDom.Switch,
           null,
-          _react2.default.createElement("navigation", null),
-          _react2.default.createElement(
-            _reactRouterDom.Switch,
-            null,
-            _react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _home2.default, exact: true }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: "/todo", component: _todo2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: "/nav", component: _navigation2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { component: _error2.default })
-          )
+          _react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _home2.default, exact: true }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: "/todo", component: _todo2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: "/nav", component: _navigation2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { component: _error2.default })
         )
       );
     }
@@ -26069,14 +26066,10 @@ var _App2 = _interopRequireDefault(_App);
 
 require('./style/global.scss');
 
-var _todo = require('./components/todo');
-
-var _todo2 = _interopRequireDefault(_todo);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
-},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js","./App":"src\\App.js","./style/global.scss":"src\\style\\global.scss","./components/todo":"src\\components\\todo.js"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules\\react\\index.js","react-dom":"node_modules\\react-dom\\index.js","./App":"src\\App.js","./style/global.scss":"src\\style\\global.scss"}],"..\\..\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -26105,7 +26098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60722' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61330' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navlink } from 'react-router-dom'
+import { link } from 'react-router-dom'
 
 
 const navigation = () => {
@@ -10,6 +11,6 @@ const navigation = () => {
         
     </div>
   );
-};
+}
 
 export default navigation

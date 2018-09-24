@@ -1,10 +1,13 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
 
 const home = () => {
   return (
-  <div>
-    <h1>Notes Home</h1>
+  <div id="root-container">
+    <Link to='/todo'>Add a note</Link>
   </div>
+  
+  
   );
 }
 
