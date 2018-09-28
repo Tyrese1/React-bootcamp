@@ -1,24 +1,21 @@
-import React, { Component } from 'react'
-import Todo from '../containers/Todo'
+import React from 'react'
+import PropTypes from 'prop-types'
 
+const Todo = ({ onClick, completed, text }) => (
+  <li
+    onClick={onClick}
+    style={{
+      textDecoration: completed ? 'line-through' : 'none'
+    }}
+  >
+    {text}
+  </li>
+)
 
-
-
-class todo extends Component {
-  render () {
-    return (
-     
-       
-      <div id="root-container">      
-        <h1 id="__welcome-header">Welcome!</h1>
-        <hr />
-        <Todo />
-      </div>
-   
-      
-     
-    )
-  }
+Todo.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  completed: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired
 }
 
-export default todo
+export default Todo
