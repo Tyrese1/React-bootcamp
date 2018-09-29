@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import './todo.scss'
 
 const AddTodo = ({ dispatch }) => {
   let input
 
   return (
-    <div>
+    <div id="todo-container-wrappper">
       <form onSubmit={e => {
         e.preventDefault()
         if (!input.value.trim()) {

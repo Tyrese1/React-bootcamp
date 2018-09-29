@@ -4,7 +4,7 @@ import Todo from './Todo'
 import './todolist.scss'
 
 const TodoList = ({ todos, toggleTodo }) => (
-  <ul>
+  <ul id="todo-list-wrapper">
     {todos.map(todo =>
       <Todo
         key={todo.id}
@@ -25,8 +25,3 @@ TodoList.propTypes = {
 }
 
 export default TodoList
-
-
-
-
-
