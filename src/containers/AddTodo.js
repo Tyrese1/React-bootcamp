@@ -7,7 +7,7 @@ const AddTodo = ({ dispatch }) => {
   let input
 
   return (
-    <div id="todo-container-wrappper">
+    <div>
       <form onSubmit={e => {
         e.preventDefault()
         if (!input.value.trim()) {
@@ -16,12 +16,15 @@ const AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input ref={node => input = node} />
-        <button type="submit">
+      <input placeholder="Todo description"  ref={node => input = node} />        
+        <input type="text" placeholder="Write todo" ref={node => input = node} />
+        <button type="submit" className="btn btn-success" >
           Add Todo
-        </button>
+        </button>         
+       
       </form>
     </div>
+    
   )
 }
 

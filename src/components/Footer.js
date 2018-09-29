@@ -3,7 +3,7 @@ import FilterLink from '../containers/FilterLink'
 import { VisibilityFilters } from '../actions'
 
 const Footer = () => (
-  <div>
+  <div id="todo-list-wrapper">
     <span>Show: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       All
@@ -11,8 +11,8 @@ const Footer = () => (
     <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
       Active
     </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
-      Completed
+    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED } >
+      Completed Todo
     </FilterLink>
   </div>
 )
